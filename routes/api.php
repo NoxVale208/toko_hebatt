@@ -8,11 +8,7 @@ use App\Models\User;
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
-
-// =====================================
 // PROTECTED ROUTES
-// =====================================
-
 Route::middleware('auth:sanctum')->group(function () {
 
     // PROFILE

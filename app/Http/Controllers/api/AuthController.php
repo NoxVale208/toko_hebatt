@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+// use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -44,7 +44,6 @@ class AuthController extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        // FIX:
         // validasi password hash
         if (!$user || !Hash::check($request->password, $user->password)) {
 
