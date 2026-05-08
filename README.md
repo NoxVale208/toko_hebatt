@@ -15,9 +15,8 @@ Password user disimpan langsung ke database tanpa hashing.
 
 4 Dampak Jika Dibiarkan
 ~ Password bocor
-~ Credential theft
-~ Account hijacking
-~ Risiko reuse password
+~ akses ilegal terhadap sistem
+~ login tanpa password
 
 perbaikan
 
