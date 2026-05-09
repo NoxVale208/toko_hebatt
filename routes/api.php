@@ -10,8 +10,11 @@ Route::post('/register', [AuthController::class, 'register']);
 // LOGIN
 Route::post('/login', [AuthController::class, 'login']);
 
-// ADMIN ROUTE (BUG)
-Route::get('/admin/users', function () {
-    return User::all();
+// PUBLIC PRODUCT
+Route::post('/products', [ProductController::class, 'store']);
+Route::get('/products', [ProductController::class, 'index']);
+Route::delete('/products/{id}', [ProductController::class, 'destroy']);
 
-});
+
+// PUBLIC DASHBOARD
+Route::get('/admin/dashboard', [DashboardController::class, 'index']);
